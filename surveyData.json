@@ -1,0 +1,97 @@
+{
+    "surveys" : [
+    {
+      "survey_id": "1",
+      "title": "Product Satisfaction Survey",
+      "description": "Product satisfaction",
+     " created_at": "date",
+      "deleted_at": "date"
+    },
+    {
+        "survey_id": "2",
+        "title": "Urban cycling",
+        "description": "Urban cycling",
+       " created_at": "date",
+        "deleted_at": "date"
+      }
+
+],
+
+    "questions": [
+        {
+          "question_id": "1",
+          "survey_id": "1",
+          "question": "Choose product",
+          "type": "dropdown",
+          "options": ["1|Product1", "2|Product2", "3|Product3"]
+        },
+        {
+          "question_id": "2",
+          "survey_id": "1",
+          "question": "Would you recommend the product?",
+          "type": "radiobutton",
+          "options": ["1|Would recommend", "2|Would not recommend"]
+        },
+        {
+          "question_id": "3",
+          "survey_id": "1",
+          "question":
+            "Which of the following words would you use to describe our products? ",
+          "type": "checkbox",
+          "options": [
+            "1|Reliable",
+            "2|High Quality",
+            "3|Usefull",
+            "4|Impractical",
+            "5|Poor quality"
+          ]},
+          {
+            "question_id": "4",
+            "survey_id": "1",
+            "question": "How likely are you to purchase any of our products again?",
+            "type": "radiobutton",
+            "options": ["1|Extremely likely", "2|Somewhat likely", "3|Not likely"]
+          },
+          {
+            "question_id": "5",
+            "survey_id": "1",
+            "question": "How would you rate the value for money of the product?",
+            "type": "radiobutton",
+            "options": ["1|Excellent", "2|Above average", "3|Average", "4|Below average", "5|Poor"]                    
+            
+          },
+          {
+            "question_id": "6",
+            "survey_id": "2",
+            "question": "Question6",
+            "type": "checkbox",
+            "options": ["1|Option1", "2|Option2", "3|Option3"]
+          },
+          {
+            "question_id": "7",
+            "survey_id": "2",
+            "question": "Question7",
+            "type": "radiobutton",
+            "options": ["1|Option1", "2|Option2", "3|Option3"]
+          },
+          {
+            "question_id": "8",
+            "survey_id": "2",
+            "question": "Question8",
+            "type": "dropdown",
+            "options": ["1|Option1", "2|Option2", "3|Option3"]
+          }
+        ],
+
+
+    "result" : [
+        {
+            "result_id": "/:id",
+            "question_id": "questions.question_id",
+            "answer": "",
+            "username": "user",
+            "email": "user@gmail.com",
+            "item_date":"date"
+        }
+    ]
+}

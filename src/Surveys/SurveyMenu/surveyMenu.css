@@ -1,0 +1,31 @@
+.surveyM{ 
+    display: inline-block;
+    background: url('../../Imgs/sun.jpg');
+    padding-top: 20%;
+    padding-bottom: 5%;
+    width: 100%;
+    object-fit: cover;
+   
+}
+
+.miniContainer{
+    width: 95%;
+    height: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.surveyImg{
+    width: 100%;
+    margin-right: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.imageText{
+    text-align: center;
+    font-weight: bolder;
+    color: #ff6f00;
+    
+}
+

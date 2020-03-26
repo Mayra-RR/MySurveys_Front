@@ -1,0 +1,44 @@
+.survey1{ 
+    display: inline-block;
+    background: url('../../Imgs/sun.jpg');
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+}
+
+.surveyContainer{
+    background: white;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 1%;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 70%;
+    padding-bottom: 5%;
+    position: inherit;
+    opacity: 0.7;
+    border-radius: 2%;
+}
+
+.questionM{
+    font-weight: bold;
+    margin-top: 3%;
+     width: 100%; 
+    padding-bottom: 1%;
+}
+
+#button{
+    margin-top: 3%;
+    background-color: #ffc107;
+    width:15%;
+    height: 10%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+  }
+
+.fieldwidth{
+    width: 20%;
+    margin-left: 5%;
+}
+

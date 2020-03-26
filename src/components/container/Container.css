@@ -1,0 +1,91 @@
+.BgContainer {
+    display: flex;
+    background: url('../../Imgs/sun.jpg');
+    padding-top: 1%;
+    padding-bottom: 10%;
+    width: 100%;
+    object-fit: cover;
+    position: static;
+}
+
+
+.typographyC{
+    padding-top: 17%;
+    padding-left: 2%;
+    margin: 2% 2%;
+    text-align: start;
+    font-weight: bolder;
+    color: #ff6f00;
+    width: 70%;
+    text-decoration: orange ;
+    border-bottom: 5px solid orange;
+    font-weight: 900;
+    font-size: 50% vw;
+}
+
+.leftGrid {
+    display: inline-block;
+    width: 85%;
+    background-size: cover;
+    color: #fff3e0;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+    text-align: left;
+    opacity: 0.9;
+}
+
+
+.ImgGrid {
+    display: inline-block;
+    width: 85%;
+    height: 80%;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 1%;
+    padding-bottom: 10%;
+    overflow: hidden;
+    opacity: 0.8;
+    
+}
+
+#chooseButton{
+    display: inline-block;
+    background-color: #ffc107;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    margin-right: 3%;
+    width: 25%;
+    padding: 2% 1%;
+    font-weight: bolder;
+    color: white;
+}
+
+
+#answerButton{
+    display: inline-block;
+    background-color: #ffc107;
+    width: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 20%;
+    padding: 2% 1%;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+}
+
+
+.loginBtn2{
+    width: 25%;
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 20%;
+    padding: 1% 0%;
+    text-align: center;
+    background-color: #ffe082;
+    font-weight: bold;
+}
