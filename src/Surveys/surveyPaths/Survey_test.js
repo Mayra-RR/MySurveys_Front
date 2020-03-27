@@ -57,6 +57,7 @@ export default class Survey_test extends Component {
     const uri = `${API_URL}surveys/${id}`;
     const payload = SurveyDataContainer.prepareSurveyPayload(this.state.survey.id);
 
+    console.log(payload);
     return axios
       .post(uri, payload)
       .then(console.log)
