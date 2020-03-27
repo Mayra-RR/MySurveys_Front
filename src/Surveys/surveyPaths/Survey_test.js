@@ -9,6 +9,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import Radio from "@material-ui/core/Radio";
 import Button from "@material-ui/core/Button";
 
+import { API_URL } from '../../constants/api';
 import { SurveyEntity } from '../../entity/SurveyEntity';
 import { SurveyDataContainer } from '../../DataContainer/SurveyDataContainer';
 
@@ -24,11 +25,15 @@ export default class Survey_test extends React.Component {
   }
 
   componentDidMount() {
-    this.getDatafromEndpoint();
+    this.fetchSurvey();
   }
 
   componentWillUnmount() {
-    SurveyDataContainer.clearSurvey(this.state.survey.id);
+    const {survey} = this.state;
+
+    if (survey) {
+      SurveyDataContainer.clearSurvey(survey.id);
+    }
   }
 
   handleOnChange(question, answer) {
@@ -37,12 +42,12 @@ export default class Survey_test extends React.Component {
     SurveyDataContainer.addAnswer(id, question, answer);
   };
   
-  getDatafromEndpoint() {
+  fetchSurvey() {
     const { id } = this.props.match.params;
+    const uri = `${API_URL}surveys/${id}`;
     
     axios
-      // .get(`http://localhost:9001/surveys/getSurveys/${id}`)
-      .get(`http://bf82eb0f.ngrok.io/surveys/getSurveys/${id}`)
+      .get(uri)
       .then((res) => this.setState({ survey: new SurveyEntity(res.data) }))
       .catch(err => console.log(err));
   };
@@ -78,6 +83,7 @@ export default class Survey_test extends React.Component {
                 onChange={ev => this.handleOnChange(question, ev.target.value)}
                 name="option"
                 value={option}
+                checked={question.answer && question.answer.contains(option)}
               />
             }
             label={option}
@@ -97,7 +103,7 @@ export default class Survey_test extends React.Component {
             onChange={ev => this.handleOnChange(question, ev.target.value)}
             value={option}
             label={option}
-            control={<Radio />}
+            control={<Radio checked={question.answer && question.answer.contains(option)} />}
           // className="formLabel"
           />
         ))}
@@ -107,9 +113,9 @@ export default class Survey_test extends React.Component {
   drawSelect(question) {
     return (!question.id || question.type !== "dropdown")
       ? null
-      : <Select className="fieldwidth" onChange={ev => this.handleOnChange(question, ev.target.value)} >
+      : <Select className="fieldwidth" onChange={ev => this.handleOnChange(question, ev.target.value)}>
         {question.options.map((option, i) => (
-          <MenuItem value={option} key={`item-${i}`}>
+          <MenuItem value={option} key={`item-${i}`} selected={question.answer && question.answer.contains(option)}>
             <em>{option}</em>
           </MenuItem>
         )
