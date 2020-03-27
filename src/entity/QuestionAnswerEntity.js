@@ -7,7 +7,7 @@ export class QuestionAnswerEntity {
     }
 
     addAnswer(question, answer) {
-        this.answer_id = (question.answer_id) ? question.answer_id : undefined;
+        this.answer_id = (question.answer && question.answer.id) ? question.answer.id : undefined;
 
         // prevert not chebbox fields collect more than single value
         if (question.type !== 'checkbox' && this.answer.size > 0) {

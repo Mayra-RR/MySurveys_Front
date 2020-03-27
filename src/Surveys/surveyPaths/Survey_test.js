@@ -45,27 +45,22 @@ export default class Survey_test extends Component {
     axios
       .get(uri)
       .then((res) => this.setState({ survey: new SurveyEntity(res.data) }))
+      .then(() => setTimeout(console.dir(this.state.survey), 3e3))
       .catch(err => console.log(err));
   };
 
-  submit(e) {
+  handleSubmit(e) {
     e.preventDefault();
     e.stopPropagation();
 
+    const { id } = this.props.match.params;
+    const uri = `${API_URL}surveys/${id}`;
     const payload = SurveyDataContainer.prepareSurveyPayload(this.state.survey.id);
-    console.dir(JSON.stringify(payload,null,3))
 
-    /*  const id = this.state; */
-    //
-    return;
-    // axios
-    //   .post(`http://localhost:9001/surveys/Result`)
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function (err) {
-    //     console.log(err);
-    //   });
+    return axios
+      .post(uri, payload)
+      .then(console.log)
+      .catch(console.error);
   };
 
   drawCheckboxes(question) {
@@ -146,7 +141,7 @@ export default class Survey_test extends Component {
             <div className="row">
               <div className="col-md-12">
                 {this.drawFormFields(survey)}
-                <Button variant="contained" id="button" onClick={this.submit.bind(this)}>Send</Button>
+                <Button variant="contained" id="button" onClick={this.handleSubmit.bind(this)}>Send</Button>
               </div>
             </div>
           </FormControl>
