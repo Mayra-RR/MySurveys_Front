@@ -24,7 +24,7 @@ class App extends Component {
               <Route path="/SurveyMenu" component={ SurveyMenu } />
               <Route path="/Survey_test/:id" component={ Survey_test } />
               
-              <Route path="/Result" component={ Result } />
+              <Route path="/Result/:id" component={ Result } />
               <Route exact path="/Surveys_Project" component={Container} />
 
             </Switch>
