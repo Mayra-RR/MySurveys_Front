@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Redirect } from "react-router-dom";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -17,7 +18,8 @@ import "./survey1.css";
 
 export default class Survey_test extends Component {
   state = {
-    survey: null
+    survey: null,
+    redirect: false,
   }
 
   componentDidMount() {
@@ -61,6 +63,7 @@ export default class Survey_test extends Component {
     return axios
       .post(uri, payload)
       .then(console.log)
+      .then(() => this.setState({redirect: true}))
       .catch(console.error);
   };
 
@@ -131,11 +134,16 @@ export default class Survey_test extends Component {
   }
 
   render() {
-    const { survey } = this.state;
+    const { id } = this.props.match.params;
+    const { survey, redirect } = this.state;
+    const route = '/Result/' + id;
 
-    return (!survey)
-      ? null
-      : <div className="survey1">
+    if (!survey) {
+      return null;
+    } else if(survey && redirect) {
+      return <Redirect to={route} />
+    } else {
+    return <div className="survey1">
         <div className="surveyContainer">
           <h1>{survey.description}</h1>
           <FormControl>
@@ -148,5 +156,6 @@ export default class Survey_test extends Component {
           </FormControl>
         </div>
       </div>;
+    };
   }
 };
