@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -8,18 +8,14 @@ import FormControl from "@material-ui/core/FormControl";
 import FormGroup from "@material-ui/core/FormGroup";
 import Radio from "@material-ui/core/Radio";
 import Button from "@material-ui/core/Button";
-
 import { API_URL } from '../../constants/api';
 import { SurveyEntity } from '../../entity/SurveyEntity';
 import { SurveyDataContainer } from '../../DataContainer/SurveyDataContainer';
 
-// import { Link } from "react-router-dom";
-//import Result from "../Result/Result";
 import axios from "axios";
 import "./survey1.css";
-/* import { useHistory } from "react-router-dom" */;
 
-export default class Survey_test extends React.Component {
+export default class Survey_test extends Component {
   state = {
     survey: null
   }
