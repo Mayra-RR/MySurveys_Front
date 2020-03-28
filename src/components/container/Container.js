@@ -21,27 +21,23 @@ class Container extends React.Component {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} className="leftGrid ">
-            <Paper>
+            <Paper className="boxText ">
               <h2>
                 <u> {"Why we're different?"}</u>
               </h2>
               <p>
-                Lorem ipsum duis mollis, est non commodo luctus, nisi erat
-                porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit. Maecenas faucibus
-                mollis interdum. Nullam id dolor id nibh ultricies vehicula ut
-                id elit. Cras justo odio, dapibus ac facilisis in, eget quam.
+                  Lorem ipsum duis mollis, est non commodo luctus, nisi erat
+                  porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Maecenas faucibus
+                  mollis interdum. Nullam id dolor id nibh ultricies vehicula ut
+                  id elit. Cras justo odio, dapibus ac facilisis in, eget quam.
               </p>
-              <Link to="/SurveyMenu" >
+              <Link to="/Login" >
                 <Button id="chooseButton" variant="contained" onClick={SurveyMenu}>
                   <label > Choose! </label>
                 </Button>
               </Link>
-              <Link to="/SurveyValidator" >
-                <Button  id="answerButton"  onclick={""}>
-                  <label> Answer </label>
-                </Button>
-              </Link>
+              
             </Paper>
           </Grid>
 

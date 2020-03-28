@@ -6,12 +6,13 @@ import bike from "../../Imgs/bike.png"
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "../surveyPaths/Survey_test";
+import "../surveyPaths/survey_form";
 
 class SurveyMenu extends React.Component {
   
   getSurveys(){
-    axios.get(`http://localhost:9001/surveys/getSurvey`)
+    const { id } = this.props.match.params;
+    axios.get(`http://localhost:9001/surveys/getSurvey/${id}`)
     .then(response => this.setState({items:response.data})).catch(err => console.log(err));
   };
   render() {
@@ -26,31 +27,31 @@ class SurveyMenu extends React.Component {
           >
             <Grid item={true} xs={3}>
               <div class="miniContainer">
-                <Link to="/Survey_test/1">
+                <Link to="/survey_form/1">
                   <img alt="survey1" src={feedback} class="surveyImg" />
                 </Link>
                 <label class="imageText">
-                  <h3>Encuesta 1</h3>
+                  <h1><u>Survey 1</u></h1>
                 </label>
               </div>
             </Grid>
             <Grid item={true} xs={3}>
               <div class="miniContainer">
-                <Link to="/Survey2">
+                <Link to="/survey_form/2">
                   <img alt="survey2" src={bike} class="surveyImg" />
                 </Link>
                 <label class="imageText">
-                  <h3>Encuesta 2</h3>
+                <h1><u>Survey 2</u></h1>
                 </label>
               </div>
             </Grid>
              <Grid item={true} xs={3}>
               <div class="miniContainer">
-                <Link to="/Survey3">
+                <Link to="/survey_form/3">
                   <img alt="survey3" src={light} class="surveyImg" />
                 </Link>
                 <label class="imageText">
-                  <h3>Encuesta 3</h3>
+                <h1><u>Survey 3</u></h1>
                 </label>
               </div>
             </Grid>

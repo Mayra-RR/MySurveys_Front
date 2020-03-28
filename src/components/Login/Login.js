@@ -2,7 +2,7 @@ import * as React from "react";
 import { GlobalContext } from "./GlobalContextProvider";
 import TextField from "@material-ui/core/TextField";
 import FormGroup from "@material-ui/core/FormGroup";
-
+import Button from "@material-ui/core/Button";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
 
@@ -17,12 +17,12 @@ const Login = () => {
     <>
       <div className="loginBody">
         <FormGroup className="loginField">
-          <h2>Admin Log</h2>
+          <h1 id="header">Survey Access</h1>
           <div>
             <TextField
               label="username"
               onChange={userIn => setUser(userIn.target.value)}
-              className
+              className ="textLlog"
             />
           </div>
           <div>
@@ -30,10 +30,12 @@ const Login = () => {
               label="password"
               type="password"
               onChange={passwordIn => setPassword(passwordIn.target.value)}
+              className ="textLlog"
+
             />
           </div>
           <div>
-            <button
+            <Button id="logButton"
               onClick={() => {
                 if (username === userInput && password === passwordInput) {
                   /* console.log("Successfull login"); */
@@ -44,7 +46,7 @@ const Login = () => {
               }}
             >
               Log in
-            </button>
+            </Button>
           </div>
         </FormGroup>
       </div>

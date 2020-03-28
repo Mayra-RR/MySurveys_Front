@@ -6,6 +6,11 @@
     width: 100%;
 }
 
+#description{
+   color:#ffc107;
+   text-decoration: darkorange;
+}
+
 .surveyContainer{
     background: white;
     padding-top: 2%;
@@ -22,8 +27,9 @@
 
 .questionM{
     font-weight: bold;
+    font-size: larger;
     margin-top: 3%;
-     width: 100%; 
+    width: 100%; 
     padding-bottom: 1%;
 }
 

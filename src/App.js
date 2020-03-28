@@ -8,7 +8,7 @@ import SurveyMenu from "./Surveys/SurveyMenu/SurveyMenu";
 
 import "flexboxgrid"
 import Result from "./Surveys/Result/Result";
-import Survey_test from "./Surveys/surveyPaths/Survey_test";
+import Survey_form from "./Surveys/surveyPaths/survey_form";
 
 class App extends Component {
   render() {
@@ -22,9 +22,9 @@ class App extends Component {
               <Switch>
               <Route path="/login" component={HomeLog} />
               <Route path="/SurveyMenu" component={ SurveyMenu } />
-              <Route path="/Survey_test/:id" component={ Survey_test } />
+              <Route path="/survey_form/:id" component={ Survey_form } />
               
-              <Route path="/Result" component={ Result } />
+              <Route path="/Result/:id" component={ Result } />
               <Route exact path="/Surveys_Project" component={Container} />
 
             </Switch>

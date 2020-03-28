@@ -1,9 +1,30 @@
 .result{ 
-    display: flex;
-    background: #ffe082;
-    height: 85vh;
-    padding-top: 5%;
-    padding-bottom: 0%;
+    display: inline-block;
+    background: url('../../Imgs/sun.jpg');
+    padding-top: 10%;
+    padding-bottom: 10%;
     width: 100%;
-    object-fit: cover;  
+    height:80vh;
+}
+
+.resultContainer{
+    background: white;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 1%;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 70%;
+    padding-bottom: 5%;
+    position: inherit;
+    opacity: 0.7;
+    border-radius: 2%;
+}
+
+.questionR{
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 3%;
+    width: 100%; 
+    padding-bottom: 1%;
 }

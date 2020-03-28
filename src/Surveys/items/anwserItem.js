@@ -1,6 +1,7 @@
 export class answerItem{
-    constructor(question_id, answer){
+    constructor({id, answer, question_id}){
+        this.id = id;
+        this.answer = answer;
         this.question_id = question_id;
-        this.answer =  answer;
     }
 };
