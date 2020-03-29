@@ -28,7 +28,7 @@ class SurveyMenu extends React.Component {
             <Grid item={true} xs={3}>
               <div class="miniContainer">
                 <Link to="/survey_form/1">
-                  <img alt="survey1" src={feedback} class="surveyImg" />
+                  <img alt="survey1" src={feedback} className="surveyImg" />
                 </Link>
                 <label class="imageText">
                   <h1><u>Survey 1</u></h1>
@@ -38,7 +38,7 @@ class SurveyMenu extends React.Component {
             <Grid item={true} xs={3}>
               <div class="miniContainer">
                 <Link to="/survey_form/2">
-                  <img alt="survey2" src={bike} class="surveyImg" />
+                  <img alt="survey2" src={bike} className="surveyImg" />
                 </Link>
                 <label class="imageText">
                 <h1><u>Survey 2</u></h1>
@@ -48,7 +48,7 @@ class SurveyMenu extends React.Component {
              <Grid item={true} xs={3}>
               <div class="miniContainer">
                 <Link to="/survey_form/3">
-                  <img alt="survey3" src={light} class="surveyImg" />
+                  <img alt="survey3" src={light} className="surveyImg" />
                 </Link>
                 <label class="imageText">
                 <h1><u>Survey 3</u></h1>

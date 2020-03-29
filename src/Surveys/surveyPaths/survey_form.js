@@ -13,6 +13,7 @@ import { surveyItem } from "../items/surveyItem";
 import { dataContainer } from "../items/dataContainer";
 import axios from "axios";
 import "./survey1.css";
+import { Link } from "@material-ui/core";
 
 export default class Survey_form extends React.Component {
   /* getSurveys(){
@@ -138,6 +139,7 @@ export default class Survey_form extends React.Component {
     } 
 
   render() {
+    
     const { id } = this.props.match.params
     const { survey, redirect } = this.state;
     const route = `/Result/${id}?group_id=${this.state.group_id}`;
@@ -171,8 +173,7 @@ export default class Survey_form extends React.Component {
                   variant="contained"
                   id="button"
                   onClick={this.handleSubmit.bind(this)}
-                  
-                >
+                 >
                   Send
                 </Button>
               </div>

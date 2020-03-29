@@ -1,7 +1,7 @@
 .loginBody{
     display: inline-block;
     background: url('../../Imgs/sun.jpg');
-    height: auto;
+    height: 80vh;
     width: 100%;
     padding-bottom: 15%;
 }
